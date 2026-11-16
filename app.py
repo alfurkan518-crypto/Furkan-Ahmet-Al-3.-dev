@@ -27,10 +27,10 @@ from PIL import Image
 
 # (a) Roboflow Universe'ten seçtiğiniz çatlak tespit modelinin kimliği
 #     (proje/sürüm biçiminde, örn. "wall-crack-detection-abc12/3")
-ROBOFLOW_MODEL_ID = "proje-adi/1"
+ROBOFLOW_MODEL_ID = "concrete-crack-detection-r584t/1"
 
 # (b) Güven eşiği: bu değerin altındaki kutular çatlak sayılmaz (0-1 arası)
-GUVEN_ESIGI = 0.30
+GUVEN_ESIGI = 0.32
 
 
 # (c) Çatlak yoğunluğu kuralı.
@@ -65,8 +65,7 @@ def kural_ogrenci(detections, yukseklik, genislik):
 
 
 # Hangi kuralı kullanacaksınız? (yukarıdaki üç işlevden biri)
-CATLAK_KURALI = kural_alan_orani
-
+CATLAK_KURALI = kural_kutu_sayisi
 # ======================================================================
 # 2. SABİT BÖLÜM (değiştirmeyin)
 # ======================================================================
